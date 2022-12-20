@@ -14,7 +14,7 @@ import requests
 from bs4 import BeautifulSoup
 
 #read hr database using sqlite3
-conn = sqlite3.connect("hr")
+conn = sqlite3.connect("assets/hr")
 
 
 #initialize app
