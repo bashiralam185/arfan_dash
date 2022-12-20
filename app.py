@@ -71,7 +71,7 @@ figure1 = px.bar(jobNumbers, x='job_title', color  = "job_title")
 #question 4
 URL = "https://www.itjobswatch.co.uk/jobs/uk/sqlite.do"
 r = requests.get(URL)
-soup = BeautifulSoup(r.content, 'html5lib')
+soup = BeautifulSoup(r.content, 'html.parser')
 table = soup.find('table', attrs = {'class':'summary'})
 table.find('form').decompose()
 table_data = table.tbody.find_all("tr")
