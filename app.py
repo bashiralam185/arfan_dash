@@ -101,7 +101,7 @@ df['6 months to20 Dec 2022'] = df['6 months to20 Dec 2022'].str.replace(',','').
 df['Same period 2020'] = df['Same period 2020'].str.replace('£','')
 df['Same period 2020'] = df['Same period 2020'].str.replace(',','').astype(float)
 
-conn = sqlite3.connect("hr")
+conn = sqlite3.connect("assets/hr")
 employees = pd.read_sql_query("select * from employees;", conn)
 jobs = pd.read_sql_query("select * from jobs;", conn)
 
